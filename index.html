@@ -15,7 +15,6 @@
             background-color: rgb(13, 13, 14);
             color: rgb(255, 255, 255);
             display: flex;
-
         }
 
         .head h2 {
@@ -40,35 +39,45 @@
 
         .i1 {
             background-color: rgb(209, 209, 209);
-            width: 900px;
-            height: 300px;
+            width: 950px;
+            height: 400px;
             padding-left: 50px;
-            padding-right: 70px;
-            padding-top: 50px;
+            padding-top: 70px;
         }
 
         .button {
-            padding-top: 29px;
-
+            padding-top: 50px;
+            animation: fadeUp 1.5s ease forwards;
         }
 
         .btn1,
         .btn {
-            background-color: rgb(4, 4, 4);
+            background-color: rgba(4, 4, 4,0.9);
             color: rgb(255, 255, 255);
-            padding: 10px;
+            padding: 12px;
             text-decoration: none;
             border-radius: 5px;
+            margin-right: 25px;
+            box-shadow:
+                10px 10px 45px rgba(12, 12, 12, 1);
+            transition: all 0.3s ease;
+
+        }
+
+        .btn1:hover,
+        .btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
         .i2 {
             background-color: rgb(209, 209, 209);
             width: 433px;
-            height: 325px;
+            height: 390px;
             margin-left: 1000px;
-            margin-top: -350px;
-            padding-top: 25px;
-            padding-left: 80px;
+            margin-top: -470px;
+            padding-top: 80px;
+            padding-left: 80px;   
         }
 
         .i2 img {
@@ -76,7 +85,25 @@
             width: 300px;
             border-radius: 50%;
             object-fit: cover;
+            box-shadow:
+                0 0 15px rgba(245, 240, 240, 1),
+                0 0 30px rgba(0, 0, 0, 0.9),
+                0 0 45px rgba(10, 9, 9, 0.5);
+            animation: pulse 3s infinite;
+        }
 
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 45px rgba(0, 0, 0, 0.9);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            }
         }
     </style>
 </head>
@@ -100,8 +127,9 @@
     <div class="i1">
         <h1>Hi, I’m <h1 style="color:rgb(115, 114, 116); margin-top: -58px; padding-left: 110px ;">Kritika</h1>
         </h1>
-        <h2> A Frontend Developer</h2>
-        <p>I’m a computer science student passionate about frontend development. I enjoy turning ideas into interactive
+        <h2> Frontend Developer</h2>
+        <p style="font-size: large;">I’m a computer science student passionate about frontend development. I enjoy
+            turning ideas into interactive
             web interfaces using HTML, CSS, and JavaScript.
             Actively preparing for software developer roles.</p>
         <div class="button"> <a href="project.html" class="btn1">View Projects</a>
