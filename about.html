@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #202020;
+            color: white;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0d0d0e;
+            position: sticky;
+            top: 0;
+        }
+
+        .head h2 {
+            font-size: 24px;
+        }
+
+        .head nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        .head nav a:hover {
+            color: #ccc;
+        }
+
+        .m1 {
+            background-color: rgb(152, 151, 151);
+            padding: 40px;
+            margin: 80px;
+            border-radius: 30px;
+        }
+
+        .m1 h1 {
+            color: rgb(79, 76, 76);
+            text-shadow: 2px 3px 5px #dcdce0;
+        }
+
+        .m1 p {
+            text-align: justify;
+        }
+
+        .e1 {
+            background-color: #202020;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .e1 :hover {
+            zoom: 1.2;
+            box-shadow: 0px 2px 3px whitesmoke;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .head {
+                flex-direction: column;
+            }
+
+            .head nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <h2>KRITIKA</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+        </nav>
+    </header>
+    <span>
+        <div class="m1">
+            <h1> About Me </h1> <br><br>
+            <p>I’m a passionate Computer Science student and aspiring Frontend Developer with a strong interest in
+                creating modern, responsive, and user-focused web applications. I enjoy transforming ideas into
+                interactive digital experiences and believe that good design combined with clean code can make
+                technology both powerful and accessible.
+                <br><br>
+                My core strengths lie in HTML, CSS, and JavaScript, where I focus on building structured, maintainable
+                code and visually appealing interfaces. I pay close attention to detail, performance, and usability,
+                ensuring that the websites I create are not only functional but also intuitive and engaging for users. I
+                enjoy the creative side of frontend development just as much as the logical problem-solving aspect.
+                <br><br>
+                Beyond technical skills, I am a curious learner who constantly explores new tools and technologies to
+                stay updated with industry trends. I am currently expanding my knowledge in React, APIs, and full-stack
+                development, aiming to build dynamic, scalable applications that solve real-world problems. Every
+                project I work on is an opportunity for me to learn something new and improve my development practices.
+                <br><br>
+                I believe in continuous growth, teamwork, and effective communication. I enjoy collaborating with
+                others, sharing ideas, and learning from experienced professionals. My goal is to contribute to
+                meaningful projects where I can apply my skills, gain hands-on experience, and evolve into a
+                well-rounded software developer.
+                <br><br>
+                I am actively seeking internship and entry-level opportunities where I can contribute with dedication,
+                creativity, and a strong willingness to learn — while building solutions that make a difference.
+            </p> <br><br><br>
+
+            <h1>Education</h1><br>
+            <div class="e1">
+                <h3>🎓 Bachelor of Technology (B.Tech) in Computer Science</h3><br>
+                <p>[Seth Jai Parkash Mukand Lal Institute of Engineering and Technology]<br>📍 Radaur <br> 🗓 2023 –
+                    2027</p>
+            </div>
+            <div class="e1">
+                <h3>🏫 Higher Secondary (12th Grade)</h3><br>
+                <p>[Swami Vivekanand Public School] <br>📍 Jagadhri <br> 🗓 2021 – 2023 <br>Stream: Science (PCM)</p>
+            </div>
+            <div class="e1">
+                <h3>🏫 Secondary School (10th Grade)</h3><br>
+                <p>[Swami Vivekanand Public School] <br>📍 Jagadhri <br> 🗓 Year of Completion: 2021 </p>
+            </div>
+        </div>
+    </span>
+
+    <footer>
+        © 2026 Kritika Goyal | Frontend Developer
+    </footer>
+</body>
+
+</html>
