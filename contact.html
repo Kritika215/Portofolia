@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
 * {
@@ -22,11 +22,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
 }
 
-/* HEADER */
 .head {
     display: flex;
     justify-content: space-between;
@@ -37,6 +41,10 @@ body {
     top: 0;
 }
 
+        .head h2 {
+            font-size: 24px;
+        }
+
 .head nav a {
     color: white;
     text-decoration: none;
@@ -44,24 +52,31 @@ body {
     transition: 0.3s;
 }
 
-.head nav a:hover { color: #ccc; }
+        .head nav a:hover {
+            color: #ccc;
+        }
 
-/* CONTACT SECTION */
 .contact {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
+    
+}
+
+.contact h2 {
+    margin-bottom: 20px;
 }
 
 .contact-btn {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: black;
-    color: white;
+  background: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin: 15px;
+  margin-top: 30px;
     font-size: 22px;
     transition: 0.3s;
     box-shadow: 0 0 10px #ffffff66;
@@ -73,61 +88,54 @@ body {
     box-shadow: 0 0 20px white, 0 0 40px white;
 }
 
-/* FORM */
-form {
-    max-width: 600px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.input, textarea {
-    width: 100%;
-    padding: 14px;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: white;
-    border-radius: 5px;
-}
-
-textarea {
-    height: 120px;
-    resize: none;
-}
-
-button {
-    padding: 14px;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: black;
+            font-size: 14px;
     color: #aaa;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .head { flex-direction: column; }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .head {
+                flex-direction: column;
+            }
+
+            .head nav {
+                margin-top: 10px;
+            }
+        }
+        .input{
+            background-color:rgba(171, 169, 169, 0.1);
+            margin-left: 465px;
+            margin-bottom: 30px;
+            width: 600px;
+            height: 50px;
+            padding-left: 20px;
+        }
+        textarea{
+            padding-top: 10px;
+            color: #cccccc97;
+        }
+        .i2{
+            background-color:rgba(245, 245, 245, 0.619);
+            margin-left: 465px;
+            margin-bottom: 37px;
+            width: 600px;
+            height: 50px;
+            padding-left: 20px;   
 }
 </style>
 </head>
 
 <body>
-
 <header class="head">
     <h2>KRITIKA</h2>
     <nav>
@@ -139,18 +147,31 @@ footer {
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-
 <section class="contact">
-    <h1>Let's Connect & Collaborate</h1>
-    <h3>Whether it's a project, collaboration, or just to say hi — I'd love to hear from you!</h3>
+    <h1 style="color: rgba(248, 246, 242, 0.933); text-shadow:2px 2px 4px #7e9b48;">Let's Connect & Collaborate </h1><br>
+    <h3 style="color: beige;">Whether it's a new project, a collaboration, or just to say hi- I'd love to hear from you!</h3>
+<br>
+    <div class="contact-links">
 
-    <div>
-        <a href="https://github.com/kritika215" target="_blank" class="contact-btn"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/918685920748" target="_blank" class="contact-btn"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn"><i class="fab fa-instagram"></i></a>
-        <a href="tel:+918685920748" class="contact-btn"><i class="fas fa-phone"></i></a>
+  <a href="https://github.com/kritika215" target="_blank" class="contact-btn">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://wa.me/918685920748" target="_blank" class="contact-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn">
+    <i class="fab fa-instagram"></i>
+  </a> 
+  <a href="tel:+918685920748" class="contact-btn">
+    <i class="fas fa-phone"></i>
+  </a>
+
     </div>
 </section>
 
