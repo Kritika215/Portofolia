@@ -108,7 +108,7 @@
             flex: 1;
             text-align: center;
             min-width: 280px;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .hero-img img {
@@ -181,26 +181,57 @@
             color: #ffffff;
         }
 
-        .project-section{
+        .project-section {
             background: #d1d1d1;
             color: black;
-            height: 400px;
+            padding: 60px 8%;
         }
-        .project-title{
-            padding: 20px;
+
+        .project-title {
             text-align: center;
-            padding-top: 50px;
-            font-size: 30px;
-            text-shadow: 5px 2px 5px rgb(62, 56, 56);
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-shadow: 3px 2px 5px rgb(62, 56, 56);
         }
-        .p-container{
-             background-color: #3f3f3f4c;
-             height: 200px;
-             width: 200px;
-              display: flex;
-            justify-content: center;
-            gap: 60px;
+
+        .p-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
+
+        .p2-container {
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: 0.4s;
+        }
+
+        .p2-container img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .p2-container h3 {
+            margin: 12px 10px 5px;
+            font-size: 17px;
+        }
+
+        .p2-container p {
+            font-size: 14px;
+            color: #555;
+            padding: 0 10px 15px;
+        }
+
+        .p2-container:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: -10px 15px 35px rgb(0, 0, 0);
+        }
+
 
         .contact {
             text-align: center;
@@ -303,10 +334,24 @@
     <section class="project-section">
         <h2 class="project-title">Featured Projects</h2>
         <div class="p-container">
-        <div class="p2-container"></div>
-        <div class="p2-container"></div>
-        <div class="p2-container"></div>
-</div>
+            <div class="p2-container"><img src="projects/coffee.png" alt="coffee">
+                <h3>☕Starbucks Landing Page</h3>
+                <p>A modern coffee brand landing page with strong visuals and product highlights.</p>
+            </div>
+            <div class="p2-container"><img src="projects/hotel.png" alt="hotel">
+                <h3>🏠Interior Suite Website</h3>
+                <p>A stylish property showcase website focusing on luxury interiors and design.</p>
+            </div>
+            <div class="p2-container"><img src="projects/netflix.png" alt="netflix">
+                <h3>🎬Netflix UI Clone</h3>
+                <p>A streaming platform interface clone with trending sections and dark theme.</p>
+            </div>
+            <div class="p2-container"><img src="projects/farmer.png" alt="farmer">
+                <h3>🌱Fresh Farm Website</h3>
+                <p>An agriculture-based website connecting farmers and consumers.</p>
+            </div>
+
+        </div>
     </section>
 
     <section class="contact">
