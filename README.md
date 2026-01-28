@@ -1,6 +1,6 @@
  🌐 Personal Portfolio Website
 
-Hi! I'm Kritika Goyal, a Computer Science student passionate about building clean and interactive web interfaces. This is my personal portfolio website showcasing my skills, projects, and contact information.
+Hi! I'm Kritika Goyal, a Computer Science student passionate about building clean and interactive web interfaces. This is my personal portfolio website showcasing my skills, projects, and contact information.I strongly believe in implementing the skills learned practically.
 
 🚀 About This Project
 
@@ -42,6 +42,10 @@ Responsive Web Design
 📞 Call
 
 (All links available on portfolio website)
+
+Future Scope
+
+As i start learning further, i will be devloping my projects further more using all the skills   
 
 👩‍💻 Author
 
