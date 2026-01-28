@@ -1,230 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity=""
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Kritika | Frontend Developer</title>
+    <title>Kritika | Frontend Developer</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body {
-    background: #0d0d0e;
-    color: white;
-    animation: fadeIn 1s ease-in;
-}
+        body {
+            background: #0d0d0e;
+            color: white;
+            animation: fadeIn 1s ease-in;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-/* HEADER */
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #0d0d0e;
-    position: sticky;
-    top: 0;
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-.head h2 { font-size: 24px; }
+        /* HEADER */
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0d0d0e;
+            position: sticky;
+            top: 0;
+        }
 
-.head nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
-}
+        .head h2 {
+            font-size: 24px;
+        }
 
-.head nav a:hover {
-    color: #ccc;
-}
+        .head nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
 
-/* HERO SECTION */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 8%;
-    flex-wrap: wrap;
-    background: #d1d1d1;
-    color: black;
-}
+        .head nav a:hover {
+            color: #ccc;
+        }
 
-.hero-text {
-    flex: 1;
-    min-width: 280px;
-}
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 8%;
+            flex-wrap: wrap;
+            background: #d1d1d1;
+            color: black;
+        }
 
-.hero-text h1 span {
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(0,0,0,0.4);
-}
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
 
-.hero-text p {
-    margin-top: 15px;
-    line-height: 1.6;
-}
+        .hero-text h1 span {
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        }
 
-.buttons {
-    margin-top: 30px;
-}
+        .hero-text p {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
 
-.btn {
-    background: black;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-right: 15px;
-    transition: 0.3s;
-}
+        .buttons {
+            margin-top: 30px;
+        }
 
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
+        .btn {
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
 
-.hero-img {
-    flex: 1;
-    text-align: center;
-    min-width: 280px;
-    margin-top: 20px;
-}
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-.hero-img img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 25px white;
-}
-.contact {
-    text-align: center;
-    padding: 30px 20px;
-}
+        .hero-img {
+            flex: 1;
+            text-align: center;
+            min-width: 280px;
+            margin-top: 20px;
+        }
 
-.contact h2 {
-    margin-bottom: 20px;
-}
+        .hero-img img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 25px white;
+        }
 
-.contact-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: rgb(10, 10, 10);
-  color: rgb(255, 255, 255);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  font-size: 22px;
-  transition: 0.3s;
-  box-shadow: 0 0 10px #ffffff66;
-  text-decoration: none;
-}
+        .skills-section {
+            background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+            padding: 30px 0;
+            text-align: center;
+        }
 
-.contact-btn:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 20px white, 0 0 40px white;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-    font-size: 14px;
-    color: #aaa;
-}
+        .skills-title {
+            color: white;
+            text-shadow: 3px 2px 3px #a29d9d;
+            font-size: 32px;
+            margin-bottom: 35px;
+            letter-spacing: 2px;
+        }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
 
-    .head {
-        flex-direction: column;
-    }
+        .skill-card {
+            width: 100px;
+            height: 100px;
+            background: #181818;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
 
-    .head nav {
-        margin-top: 10px;
-    }
-}
-</style>
+        .skill-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 0 25px currentColor;
+        }
+
+        .html {
+            color: #e44d26;
+        }
+
+        .css {
+            color: #264de4;
+        }
+
+        .js {
+            color: #f0db4f;
+        }
+
+        .react {
+            color: #61dbfb;
+        }
+
+
+        .contact {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgb(10, 10, 10);
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            font-size: 22px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #ffffff66;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 20px white, 0 0 40px white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .head {
+                flex-direction: column;
+            }
+
+            .head nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="head">
-    <h2>KRITIKA</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <header class="head">
+        <h2>KRITIKA</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Hi, I’m <span>Kritika</span></h1>
-        <h2>Frontend Developer</h2>
-        <p>I’m a computer science student passionate about frontend development.  
-        I enjoy turning ideas into interactive web interfaces using HTML, CSS, and JavaScript.  
-        Actively preparing for software developer roles.</p>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hi, I’m <span>Kritika</span></h1>
+            <h2>Frontend Developer</h2>
+            <p>I’m a computer science student passionate about frontend development.
+                I enjoy turning ideas into interactive web interfaces using HTML, CSS, and JavaScript.
+                Actively preparing for software developer roles.</p>
 
-        <div class="buttons">
-            <a href="project.html" class="btn">View Projects</a>
-            <a href="resume.html" download class="btn">Download Resume</a>
+            <div class="buttons">
+                <a href="project.html" class="btn">View Projects</a>
+                <a href="resume.html" download class="btn">Download Resume</a>
+            </div>
         </div>
-    </div>
 
-    <div class="hero-img">
-        <img src="profile.jpeg" alt="Profile">
-    </div>
-</section>
+        <div class="hero-img">
+            <img src="profile.jpeg" alt="Profile">
+        </div>
+    </section>
+    <section class="skills-section">
+        <h2 class="skills-title">Skills</h2>
 
-<section class="contact">
-    <h2>Contact Me</h2>
+        <div class="skills-container">
+            <div class="skill-card html"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-card css"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-card js"><i class="fa-brands fa-js"></i></div>
+            <div class="skill-card react"><i class="fa-brands fa-react"></i></div>
+        </div>
+    </section>
 
-   <div class="contact-links">
+    <section class="contact">
+        <h2>Contact Me</h2>
 
-  <a href="https://wa.me/918685920748" target="_blank" class="contact-btn">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn">
-    <i class="fas fa-envelope"></i>
-  </a>
-  <a href="tel:+918685920748" class="contact-btn">
-    <i class="fas fa-phone"></i>
-  </a>
-  <a href="https://github.com/kritika215" target="_blank" class="contact-btn">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
-</section>
+        <div class="contact-links">
 
-<footer>
-    © 2026 Kritika Goyal | Frontend Developer
-</footer>
+            <a href="https://wa.me/918685920748" target="_blank" class="contact-btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+918685920748" class="contact-btn">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/kritika215" target="_blank" class="contact-btn">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Kritika Goyal | Frontend Developer
+    </footer>
 
 </body>
+
 </html>
