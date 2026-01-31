@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,28 +53,49 @@
         .head nav a:hover {
             color: #ccc;
         }
-    
-       .project{
-        background: linear-gradient(135deg, #0f0f0f, #6f6e6e);
-        padding: 50px;
-       
-       }
-        
-       .container1{
-        width: 300px;
-        height: 400px;
-        background-color: #0d0d0e6d;
-         box-shadow: 8px 8px 8px #cccccc9d;
-       }
-       .container1 img{
-         width: 100%;
-         height: 200px;
-       }
+
+        .focus-gallery {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            height: 100vh;
+            align-items: center;
+            padding: 0 calc(50vw-150px);
+            margin-top: -130px;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .focus-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            flex: 0 0 300px;
+            height: 200px;
+            margin-right: 170px;
+            margin-left: 20px;
+            scroll-snap-align: center;
+            transition: transform 0.4s ease, opacity  0.4s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+
+        .item img {
+            width: 140%;
+            height: 100%;
+            object-fit:fill;
+            border-radius: 20px;
+            box-shadow: -10px 10px 10px gray;
+        }
     </style>
 </head>
 
 <body>
-     <header class="head">
+    <header class="head">
         <h2>KRITIKA</h2>
         <nav>
             <a href="index.html">Home</a>
@@ -84,12 +106,15 @@
         </nav>
     </header>
     <section>
-        <div class="project">
-            <div class="container1">
-                <img src="projects/hotel.png" alt="">
-            </div>
+        <div class="focus-gallery">
+            <div class="item"><img src="projects/coffee.png" alt=""></div>
+            <div class="item"><img src="projects/netflix.png" alt=""></div>
+            <div class="item"><img src="projects/farmer.png" alt=""></div>
+            <div class="item"><img src="projects/quiz.png" alt=""></div>
+            <div class="item"><img src="projects/todoapp.png" alt=""></div>
         </div>
     </section>
 
 </body>
+
 </html>
