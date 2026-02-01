@@ -2,118 +2,305 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project work</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project work</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        body {
-            background: #0d0d0e;
-            color: white;
-            animation: fadeIn 1s ease-in;
-        }
+    body {
+      background: #1d1d20;
+      color: white;
+      animation: fadeIn 1s ease-in;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-            to {
-                opacity: 1;
-            }
-        }
+      to {
+        opacity: 1;
+      }
+    }
 
-        .head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: #0d0d0e;
-            position: sticky;
-            top: 0;
-        }
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #0d0d0e;
+      position: sticky;
+      top: 0;
+    }
 
-        .head h2 {
-            font-size: 24px;
-        }
+    .head h2 {
+      font-size: 24px;
+    }
 
-        .head nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            transition: 0.3s;
-        }
+    .head nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
 
-        .head nav a:hover {
-            color: #ccc;
-        }
+    .head nav a:hover {
+      color: #ccc;
+    }
 
-        .focus-gallery {
-            display: flex;
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            height: 100vh;
-            align-items: center;
-            padding: 0 calc(50vw-150px);
-            margin-top: -130px;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
-        }
+    .focus-gallery {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      height: 100vh;
+      align-items: center;
+      padding: 0 calc(50vw-150px);
+      margin-top: -60px;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
 
-        .focus-gallery::-webkit-scrollbar {
-            display: none;
-        }
+    .focus-gallery::-webkit-scrollbar {
+      display: none;
+    }
 
-        .item {
-            flex: 0 0 300px;
-            height: 200px;
-            margin-right: 170px;
-            margin-left: 20px;
-            scroll-snap-align: center;
-            transition: transform 0.4s ease, opacity  0.4s ease;
-        }
+    .item {
+      flex: 0 0 300px;
+      height: 200px;
+      margin-right: 170px;
+      margin-left: 20px;
+      scroll-snap-align: center;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
 
-        .item:hover {
-            transform: scale(1.3);
-            opacity: 1;
-        }
+    .item:hover {
+      transform: scale(1.3);
+      opacity: 1;
+    }
 
-        .item img {
-            width: 140%;
-            height: 100%;
-            object-fit:fill;
-            border-radius: 20px;
-            box-shadow: -10px 10px 10px gray;
-        }
-    </style>
+    .item img {
+      width: 140%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 20px;
+      box-shadow: -10px 10px 10px gray;
+    }
+
+    .project-section {
+      padding: 0px 10%;
+      background: linear-gradient(135deg, #0c0e0f, #373838, #090909);
+      color: white;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      padding-top: 20px;
+      background: linear-gradient(90deg, #00c6ff, #dee4eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .project-container {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .project-image img {
+      width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-content {
+      flex: 1;
+    }
+
+    .project-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .project-desc {
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #dcdcdc;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .feature-grid div {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .tech-stack span {
+      display: inline-block;
+      background: #6593cf;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 5px 5px 15px 0;
+      font-size: 0.85rem;
+    }
+
+    .project-buttons .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-bottom: 50px;
+      transition: 0.3s;
+    }
+
+    .btn.live {
+      background: #00c6ff;
+      color: black;
+    }
+
+    .btn.code {
+      background: transparent;
+      border: 1px solid #00c6ff;
+      color: #00c6ff;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 15px #00c6ff;
+    }
+
+    @media(max-width: 900px) {
+      .project-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .project-image img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header class="head">
-        <h2>KRITIKA</h2>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="project.html">Projects</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <section>
-        <div class="focus-gallery">
-            <div class="item"><img src="projects/coffee.png" alt=""></div>
-            <div class="item"><img src="projects/netflix.png" alt=""></div>
-            <div class="item"><img src="projects/farmer.png" alt=""></div>
-            <div class="item"><img src="projects/quiz.png" alt=""></div>
-            <div class="item"><img src="projects/todoapp.png" alt=""></div>
+  <header class="head">
+    <h2>KRITIKA</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section>
+    <div class="focus-gallery">
+      <div class="item"><img src="projects/coffee.png" alt=""></div>
+      <div class="item"><img src="projects/netflix.png" alt=""></div>
+      <div class="item"><img src="projects/farmer.png" alt=""></div>
+      <div class="item"><img src="projects/quiz.png" alt=""></div>
+      <div class="item"><img src="projects/todoapp.png" alt=""></div>
+    </div>
+  </section>
+  <section class="project-section" id="project">
+    <h2 class="section-title">🚀 Featured Project</h2>
+
+    <div class="project-container">
+
+      <div class="project-image">
+        <img src="projects/todoapp.png" alt="TaskFlow Pro Screenshot">
+      </div>
+
+      <div class="project-content">
+        <h3>TaskFlow Pro — Smart Task Management Web App</h3>
+        <p class="project-desc">
+          A SaaS-style productivity web application built to manage tasks with authentication,
+          real-time UI updates, analytics dashboard, and drag-and-drop workflow.
+          Designed to simulate real-world application architecture beyond a basic to-do list.
+        </p>
+
+        <div class="feature-grid">
+          <div>🔐 Authentication System</div>
+          <div>📋 Task CRUD Operations</div>
+          <div>⚡ Drag & Drop Kanban</div>
+          <div>📊 Analytics Dashboard</div>
+          <div>🌙 Dark Mode UI</div>
+          <div>💾 Local Data Persistence</div>
         </div>
-    </section>
+
+
+        <div class="tech-stack">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>DOM API</span>
+          <span>Canvas API</span>
+        </div>
+
+
+        <div class="project-buttons">
+          <a href="taskflown.netlify.app" class="btn live">🌍 Live Demo</a>
+          <a href="https://github.com/Kritika215/Task_Manager" class="btn code">💻 GitHub Repo</a>
+        </div>
+      </div>
+<div class="project-container">
+
+  <div class="project-image">
+    <img src="projects/netflix.png" alt="Netflix Clone Screenshot">
+  </div>
+
+  <div class="project-content">
+    <h3>Netflix Clone — Streaming Platform UI Replica</h3>
+    <p class="project-desc">
+      A fully responsive Netflix-inspired web application that replicates the look and feel 
+      of the real streaming platform. Built with modern UI design, interactive components, 
+      dynamic movie rows, and hover effects to simulate a real OTT experience.
+      Focused on layout structuring, advanced CSS styling, and smooth user interaction.
+    </p>
+
+    <div class="feature-grid">
+      <div>🎬 Hero Banner with Featured Movie</div>
+      <div>📺 Movie Rows with Horizontal Scroll</div>
+      <div>🖱️ Hover Animations & Effects</div>
+      <div>📱 Fully Responsive Design</div>
+      <div>🌙 Dark Themed UI</div>
+      <div>⚡ Smooth Navigation & Layout</div>
+    </div>
+
+    <div class="tech-stack">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Flexbox</span>
+      <span>Grid</span>
+    </div>
+
+    <div class="project-buttons">
+      <a href="n-clone-1baf61.netlify.app" class="btn live">🌍 Live Demo</a>
+      <a href="https://github.com/Kritika215/Netflix_clone_project" class="btn code">💻 GitHub Repo</a>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+  </section>
+
 
 </body>
 
