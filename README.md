@@ -1,57 +1,132 @@
- 🌐 Personal Portfolio Website
+# 🌐 Kritika Goyal | Personal Portfolio Website
 
-Hi! I'm Kritika Goyal, a Computer Science student passionate about building clean and interactive web interfaces. This is my personal portfolio website showcasing my skills, projects, and contact information.I strongly believe in implementing the skills learned practically.
+A modern, responsive personal portfolio website built to showcase my skills, projects, education, and certifications as a MERN Stack Developer.
 
-🚀 About This Project
+---
 
-This portfolio website is designed to represent my profile as a frontend developer. It highlights:
+## ✨ Features
 
-✔ My technical skills
-✔ Projects I’ve built
-✔ Education background
-✔ Contact links
-✔ Resume download option
+- 🎨 **Modern Dark Theme** — Sleek navy background with blue, cyan, and purple gradient accents
+- 📱 **Fully Responsive** — Optimized layouts for desktop, tablet, and mobile devices
+- 🧩 **Smooth Animations** — Fade-ins, slide-ins, hover effects, and floating background elements
+- 🛠 **Skills Showcase** — Interactive animated skill cards (HTML, CSS, JS, React, Node.js, MongoDB, etc.)
+- 💼 **Project Gallery** — Highlighted projects with images and descriptions
+- 🎓 **Education Timeline** — Animated cards detailing academic background
+- 🏆 **Certifications Section** — Visual gallery of certificates and achievements
+- 📩 **Contact Page** — Functional-style contact form with social media links (GitHub, LinkedIn, Instagram, WhatsApp, Email, Phone)
+- ⚡ **Pure HTML, CSS & JavaScript** — No frameworks, lightweight and fast-loading
 
-The design focuses on a modern dark theme, glowing UI effects, and responsive layout.
+---
 
-🛠 Technologies Used
+## 🗂 Project Structure
 
-HTML5
-CSS3
-Font Awesome Icons
-Responsive Web Design
+```
+Portfolia/
+│
+├── index.html              # Home page
+├── about.html               # About Me, Education & Certifications
+├── contact.html             # Contact form & social links
+├── project.html              # Projects page
+├── resume.html               # Resume page
+│
+├── certificates/             # Certificate images
+│   ├── cert1.png
+│   ├── cert2.png
+│   ├── cert3.png
+│   ├── cert4.png
+│   ├── cert5.png
+│   └── cert6.png
+│
+├── projects/                  # Project preview images
+│   ├── todoapp.png
+│   ├── quiz.png
+│   ├── netflix.png
+│   ├── piano.png
+│   └── neonsnake.png
+│
+├── fonts/                     # Custom fonts (if any)
+├── profile.png                 # Profile picture
+└── README.md
+```
 
-✨ Features
+---
 
-🎨 Modern dark UI design
-🌟 Glowing social media icons
-📱 Mobile responsive layout
-🧑 About Me section
-🎓 Education details
-💼 Projects showcase
-📞 Contact with clickable icons
-📄 Resume download button
+## 🛠 Tech Stack
 
-🔗 Connect With Me
+| Category | Technologies |
+|---------|-------------|
+| Markup | HTML5 |
+| Styling | CSS3 (Flexbox, Grid, Animations, Gradients) |
+| Icons | Font Awesome 6 |
+| Version Control | Git & GitHub |
 
-💬 WhatsApp
-📸 Instagram
-💼 LinkedIn
-💻 GitHub
-✉ Email
-📞 Call
+---
 
-(All links available on portfolio website)
+## 🚀 Getting Started
 
-Future Scope
+### Clone the repository
+```bash
+git clone https://github.com/kritika215/Portfolia.git
+```
 
-As i start learning further, i will be devloping my projects further more using all the skills   
+### Open locally
+Simply open `index.html` in your browser — no build tools or installations required.
 
-👩‍💻 Author
+```bash
+cd Portfolia
+start index.html   # Windows
+open index.html     # macOS
+```
 
-Kritika Goyal
-Aspiring Software Developer | Frontend Enthusiast
+---
 
-⭐ Support
+## 📌 Pages Overview
 
-If you like this project, give it a ⭐ on GitHub!
+| Page | Description |
+|------|-------------|
+| **Home** | Hero introduction, skills grid, featured projects, and contact links |
+| **About** | Personal bio, education timeline, and certifications gallery |
+| **Projects** | Detailed showcase of all major projects |
+| **Resume** | Downloadable resume |
+| **Contact** | Contact form with social and direct contact links |
+
+---
+
+## 🏆 Certifications Included
+
+- Web Development & Python Programming — JMIT (2023-24)
+- Talent Show Competition — JMIT (2025)
+- Cultural Carnival — JMIT (2025)
+- Blood Donation Volunteer — JMIT (2025)
+- Smart India Hackathon — JMIT (2024)
+- 30 Days DSA Challenge — SoarX (2026)
+
+---
+
+## 💻 Featured Projects
+
+- ☕ **StudySync** — Full-stack student productivity dashboard
+- 🧠 **Quiz Application** — Interactive timed quiz app
+- 🎬 **Netflix UI Clone** — Streaming platform interface clone
+- 🎹 **Piano Keyboard** — Browser-based playable piano
+- 🐍 **Neon Snake Game** — Vanilla JS snake game with high scores
+
+---
+
+## 📬 Connect With Me
+
+- 🔗 [LinkedIn](https://linkedin.com/in/kritika-goyal-b9522b289)
+- 💻 [GitHub](https://github.com/kritika215)
+- 📷 [Instagram](https://instagram.com/_kritika_goyal21)
+- 📧 [Email](mailto:kritikagoyal215@gmail.com)
+- 💬 [WhatsApp](https://wa.me/918685920748)
+
+---
+
+## 📄 License
+
+This project is open for learning purposes. Feel free to fork and customize it for your own portfolio — just remember to update the personal details, images, and links to your own!
+
+---
+
+### ⭐ If you liked this project, consider giving it a star on GitHub!
