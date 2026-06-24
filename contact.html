@@ -1,186 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kritika</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-body {
-    background: #202020;
-    color: white;
-    animation: fadeIn 1s ease-in;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        body {
+            background: #0a0e27;
+            color: white;
+            overflow-x: hidden;
+        }
 
-/* HEADER */
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #0d0d0e;
-    position: sticky;
-    top: 0;
-}
+        .background-blur {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(33, 150, 243, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(156, 39, 176, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
 
-.head nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-.head nav a:hover { color: #ccc; }
+            to {
+                opacity: 1;
+            }
+        }
 
-/* CONTACT SECTION */
-.contact {
-    text-align: center;
-    padding-top: 50px;
-}
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
 
-.contact-btn {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: black;
-    color: white;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    font-size: 22px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #ffffff66;
-    text-decoration: none;
-}
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-.contact-btn:hover {
-    transform: scale(1.15);
-    box-shadow: 0 0 20px white, 0 0 40px white;
-}
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
 
-/* FORM */
-form {
-    max-width: 600px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.input, textarea {
-    width: 100%;
-    padding: 14px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-    border-radius: 6px;
-    font-size: 15px;
-    transition: 0.3s;
-}
+        @keyframes float {
 
-.input:focus, textarea:focus {
-    outline: none;
-    border-color: white;
-    box-shadow: 0 0 10px #ffffff55;
-}
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+            }
 
-/* TEXTAREA */
-textarea {
-    height: 100px;
-    resize: none;
-}
+            50% {
+                transform: translateY(50px) translateX(50px);
+            }
+        }
 
-/* BUTTON */
-button {
-    padding: 14px;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #ffffff44;
-}
+        @keyframes glow {
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px white, 0 0 40px #aaa;
-}
+            0%,
+            100% {
+                text-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+            }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-    color: #aaa;
-    margin-top: 40px;
-}
+            50% {
+                text-shadow: 0 0 20px rgba(33, 150, 243, 0.8);
+            }
+        }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .head { flex-direction: column; }
-    .head nav { margin-top: 10px; }
-}
-</style>
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* HEADER */
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(33, 150, 243, 0.2);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .head h2 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #2196F3, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .head nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .head nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .head nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #2196F3, #9c27b0);
+            transition: width 0.3s ease;
+        }
+
+        .head nav a:hover::before {
+            width: 100%;
+        }
+
+        .head nav a:hover {
+            color: #2196F3;
+            transform: translateY(-3px);
+        }
+
+        /* CONTACT HERO */
+        .contact-hero {
+            text-align: center;
+            padding: 90px 8% 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(156, 39, 176, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .contact-hero h1 {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .contact-hero h1 span {
+            background: linear-gradient(135deg, #2196F3, #00BCD4, #9c27b0);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-hero p {
+            font-size: 16px;
+            color: #bbb;
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.7;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 45px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-btn {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(0, 188, 212, 0.2) 100%);
+            color: #00BCD4;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+            border: 2px solid rgba(33, 150, 243, 0.3);
+            box-shadow: 0 10px 40px rgba(33, 150, 243, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #2196F3, #00BCD4);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .contact-btn:hover::before {
+            opacity: 1;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-12px) scale(1.15);
+            border-color: #00BCD4;
+            box-shadow: 0 25px 50px rgba(33, 150, 243, 0.45);
+            color: white;
+        }
+
+        /* FORM SECTION */
+        .form-section {
+            padding: 60px 8% 100px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(33, 150, 243, 0.05) 100%);
+            border: 1px solid rgba(33, 150, 243, 0.2);
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            animation: slideInUp 0.9s ease-out;
+        }
+
+        .input,
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(33, 150, 243, 0.25);
+            color: white;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .input::placeholder,
+        textarea::placeholder {
+            color: #777;
+        }
+
+        .input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #00BCD4;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.35);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            padding: 15px;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(33, 150, 243, 0.5);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            font-size: 14px;
+            color: #aaa;
+            border-top: 1px solid rgba(33, 150, 243, 0.2);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .head {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            .head nav {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .head nav a {
+                font-size: 12px;
+            }
+
+            .contact-hero h1 {
+                font-size: 32px;
+            }
+
+            .contact-hero p {
+                font-size: 14px;
+            }
+
+            .contact-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            form {
+                padding: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="head">
-    <h2>KRITIKA</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <div class="background-blur"></div>
 
-<section class="contact">
-    <h1>Let's Connect & Collaborate</h1><br>
-    <h3>Whether it's a project, collaboration, or just to say hi — I'd love to hear from you!</h3><br>
+    <header class="head">
+        <h2>KRITIKA</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#certifications">Certifications</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <div>
-        <a href="https://github.com/kritika215" target="_blank" class="contact-btn"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/918685920748" target="_blank" class="contact-btn"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn"><i class="fab fa-instagram"></i></a>
-        <a href="tel:+918685920748" class="contact-btn"><i class="fas fa-phone"></i></a>
-    </div>
-</section>
+    <section class="contact-hero">
+        <h1>Let's <span>Connect</span> & Collaborate</h1>
+        <p>Whether it's a project, collaboration, or just to say hi — I'd love to hear from you!</p>
 
-<section>
-    <form>
-        <input type="text" class="input" placeholder="Your Name" required>
-        <input type="text" class="input" placeholder="Subject" required>
-        <textarea placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+        <div class="contact-links">
+            <a href="https://github.com/kritika215" target="_blank" class="contact-btn" title="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/kritika-goyal-b9522b289" target="_blank" class="contact-btn"
+                title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:kritikagoyal215@gmail.com" class="contact-btn" title="Email"><i
+                    class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/918685920748" target="_blank" class="contact-btn" title="WhatsApp"><i
+                    class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/_kritika_goyal21" target="_blank" class="contact-btn" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="tel:+918685920748" class="contact-btn" title="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+    </section>
 
-<footer>
-    © 2026 Kritika Goyal | Frontend Developer
-</footer>
+    <section class="form-section">
+        <form>
+            <input type="text" class="input" placeholder="Your Name" required>
+            <input type="text" class="input" placeholder="Subject" required>
+            <textarea placeholder="Your Message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2026 Kritika Goyal | MERN Stack Developer | Crafted with passion ✨
+    </footer>
 
 </body>
+
 </html>
